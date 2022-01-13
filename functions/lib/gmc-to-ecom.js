@@ -199,7 +199,7 @@ const parseProduct = async (appSdk, appData, auth, storeId, feedProduct, product
     const categories = await getCategory(appSdk, storeId, feedProduct)
     const condition = getFeedValueByKey('condition', feedProduct)
     const newProductData = {
-      sku: (getFeedValueByKey('sku', feedProduct)).toString() || (getFeedValueByKey('id', feedProduct)).toString(),
+      sku: (getFeedValueByKey('sku', feedProduct) || getFeedValueByKey('id', feedProduct)).toString(),
       name: getFeedValueByKey('title', feedProduct),
       subtitle: getFeedValueByKey('subtitle', feedProduct),
       meta_title: getFeedValueByKey('title', feedProduct),
