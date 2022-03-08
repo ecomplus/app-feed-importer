@@ -251,7 +251,7 @@ const parseProduct = async (appSdk, appData, auth, storeId, feedProduct, product
 
     delete product._id
     console.log('[PARSED PRODUCT]', product)
-    logger.log('[PRODUCT-TO-ECOM:parseProduct | SUCCESS]', JSON.stringify(product))
+    logger.log(`[PRODUCT-TO-ECOM:parseProduct | SUCCESS] - ${storeId}`, JSON.stringify(product))
     return product
   } catch (error) {
     logger.error('[PRODUCT-TO-ECOM:parseProduct | ERROR]', error)
