@@ -14,8 +14,8 @@
   "dependencies": {
     "@ecomplus/application-sdk": "^22.0.0-firestore.1.15.6",
     "@google-cloud/firestore": "^4.15.1",
-    "axios": "^0.26.0",
-    "busboy": "^1.4.0",
+    "axios": "^0.26.1",
+    "busboy": "^1.5.0",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "date-fns": "^2.28.0",
@@ -23,10 +23,10 @@
     "express": "^4.17.3",
     "fast-xml-parser": "^3.21.1",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.1",
+    "firebase-functions": "^3.19.0",
     "form-data": "^4.0.0",
     "he": "^1.2.0",
-    "node-html-parser": "^5.2.0",
+    "node-html-parser": "^5.3.3",
     "slugify": "^1.6.5",
     "uuid": "^8.3.2"
   },
