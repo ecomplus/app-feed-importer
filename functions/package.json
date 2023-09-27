@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@ecomplus/application-sdk": "^22.0.0-firestore.1.15.7",
-    "@google-cloud/firestore": "^4.15.1",
+    "@google-cloud/firestore": "^6.8.0",
     "axios": "^0.27.2",
     "busboy": "^1.6.0",
     "cors": "^2.8.5",
