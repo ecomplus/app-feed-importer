@@ -195,7 +195,7 @@ const tryImageUpload = async (storeId, auth, originImgUrl, product) => {
 const parseProduct = async (appSdk, appData, auth, storeId, feedProduct, product = {}, meta = {}) => {
   try {
     const categories = await getCategory(appSdk, storeId, feedProduct)
-    const condition = getFeedValueByKey('condition', feedProduct)
+    const condition = getFeedValueByKey('condition', feedProduct)?.toLowerCase()
     const newProductData = {
       sku: (getFeedValueByKey('sku', feedProduct) || getFeedValueByKey('id', feedProduct) || getFeedValueByKey('ID', feedProduct)).toString()
         .replace(/\s+/g, '_'),
@@ -255,7 +255,7 @@ const parseProduct = async (appSdk, appData, auth, storeId, feedProduct, product
     if (mpn) {
       newProductData.mpn = [mpn.toString()]
     }
-    if (condition) {
+    if (condition === 'new' || condition === 'refurbished' || condition === 'used' || condition === 'not_specified') {
       newProductData.condition = condition
     }
     const dimensions = ['shipping_length', 'shipping_width', 'shipping_height']
